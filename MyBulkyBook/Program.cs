@@ -21,6 +21,7 @@ namespace MyBulkyBook
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    //----------------
                 });
     }
 }
