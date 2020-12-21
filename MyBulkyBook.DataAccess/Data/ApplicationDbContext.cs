@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MyBulkyBook.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyBulkyBook.Data
+namespace MyBulkyBook.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -12,5 +13,6 @@ namespace MyBulkyBook.Data
             : base(options)
         {
         }
+        public DbSet<Category> Categories { get; set; }
     }
 }
